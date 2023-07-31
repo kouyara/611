@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451508790}
   - component: {fileID: 451508789}
+  - component: {fileID: 451508791}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -372,6 +373,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451508791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451508788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2926b5fe46b42928666cbe12d3ff81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &452578841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -597,6 +610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67040675f9f7247579925a7476fc8ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound_ramen: {fileID: 0}
+  sound_kono: {fileID: 0}
+  hand_ramen: {fileID: 0}
 --- !u!65 &613771002
 BoxCollider:
   m_ObjectHideFlags: 0
