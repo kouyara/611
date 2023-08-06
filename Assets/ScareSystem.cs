@@ -5,12 +5,19 @@ using TMPro;
 using System;
 using System.Diagnostics;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class ScareSystem : MonoBehaviour
 {
+    int HaveCapRamens = 0; //渡したラーメンの数
 
-    private TextMeshProUGUI textMeshPro;
-    int HaveCapRamens = 0;
+    public TextMeshProUGUI TextMeshPro;
+    public GameObject ramen0;
+    public GameObject ramen1;
+    public GameObject ramen2;
+    private bool ramen0Bool;
+    private bool ramen1Bool;
+    private bool ramen2Bool;
 
     Stopwatch stopwatch = new Stopwatch();
 
@@ -19,14 +26,29 @@ public class ScareSystem : MonoBehaviour
 
     void Start()
     {
-        textMeshPro = GetComponent<TextMeshProUGUI>();
         stopwatch.Start();
 
     }
 
     private void Update()
     {
+        if (!ramen0Bool && ramen0 == null)
+        {
+            HaveCapRamens = HaveCapRamens + 1;
+            ramen0Bool = true;
+        }
+        if (!ramen1Bool && ramen1 == null)
+        {
+            HaveCapRamens = HaveCapRamens + 1;
+            ramen1Bool = true;
+        }
+        if (!ramen2Bool && ramen2 == null)
+        {
+            HaveCapRamens = HaveCapRamens + 1;
+            ramen2Bool = true;
+        }
+
         TimeSpan ts = stopwatch.Elapsed;
-        textMeshPro.text = $"You have CapRamens : {HaveCapRamens}\nTime : {ts.Minutes}:{ts.Seconds}.{ts.Milliseconds}";
+        TextMeshPro.text = $"You have CapRamens : {HaveCapRamens}\nTime : {ts.Minutes}:{ts.Seconds}.{ts.Milliseconds}";
     }
 }
