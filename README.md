@@ -13,7 +13,7 @@ git clone https://github.com/kouyara/611/edit/main/README.md
 
 モジュールを加える。※容量は`18.74GB`
 
-`Android Build Support`¥¥
+`Android Build Support`//
 `OpenJDK`¥¥
 `Android SDK & NDK Tools`¥¥
 `Mac Build Support (IL2CPP)`¥¥
