@@ -28,11 +28,15 @@ WebGL Build Support
 1. Unityの画面になったら、画面の左上のアイコン「File」->「Build Setting」
 
 ```bash
-「テクスチャー圧縮」は，「ASTC」．
+上記の「Scene In Build」のチェックボックス全てにチェックを入れる。
 
-「デバイスを実行します」は，「Oculus Quest」
+「Texture Compression」は，「ASTC」
 
-「ターゲットの切り替え」を押す．（時間がかかる）
+OculusとPCを接続する。
 
-「ビルドして実行」して実行完了
+「Run Device」は，「Oculus Quest」
+
+「Change Target」を押す
+
+「Build And Run」して実行
 ```
