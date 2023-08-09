@@ -28,17 +28,24 @@ public class GameSystem : MonoBehaviour
     public TextMeshProUGUI TextMeshPro9;
 
     Stopwatch stopwatch = new Stopwatch();
+    public static string time;
+
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>(); //Componentを取得
-        hand_ramen.SetActive(false); //ラーメンは見えない
+        hand_ramen.SetActive(false); //ラーメンは見えない。
         is_having_ramen = false; //ラーメンを持っているかどうか。
         stopwatch.Start(); //ストップウォッチをスタートする。
     }
 
     void Update()
     {
+        OnCollisionLeft oncollisionleft = GetComponent<OnCollisionLeft>();
+        if (oncollisionleft.give_ramen == true)
+        {
+            SceneManager.LoadScene("GameClear");
+        }
         GameSystem gamesystem = GetComponent<GameSystem>();
         TimeSpan ts = stopwatch.Elapsed;
         //獲得したラーメンと、秒数をテキストに表示させる。
@@ -74,7 +81,7 @@ public class GameSystem : MonoBehaviour
 
         else if (collision.gameObject.name == "kono")
         {
-            if (is_having_ramen) 
+            if (is_having_ramen)
             {   //河野先生に衝突した場合
                 if (is_having_ramen == true)
                 {
@@ -83,17 +90,17 @@ public class GameSystem : MonoBehaviour
                     is_having_ramen = false;
                     num_of_maked_ramen = num_of_maked_ramen + 1;
 
-                    if (num_of_maked_ramen == 3)
+                    if (num_of_maked_ramen >= 3)
                     {
-                        string filePath = Path.Combine(Application.streamingAssetsPath, "time.txt");
-                        using (StreamWriter writer = new StreamWriter(filePath))
-                        {
-                            writer.Write(stopwatch.Elapsed.ToString());
-                        }
-                            SceneManager.LoadScene("GameClear");
+                        time = $"time  {stopwatch.Elapsed.Minutes}:{stopwatch.Elapsed.Seconds}";
+                        SceneManager.LoadScene("GameClear");
                     }
                 }
             }
         }
+    }
+    public static string getTime()
+    {
+        return time;
     }
 }
