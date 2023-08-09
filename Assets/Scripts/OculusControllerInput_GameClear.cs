@@ -12,23 +12,10 @@ public class OculusControllerInput_GameClear : MonoBehaviour
 {
     // テキストを表示するもの
     public TextMeshProUGUI text_mesh_pro;
+    static string time = GameSystem.getTime();
     void Start()
     {
-
-
-        // 時間が書いてあるtime.txtの読み込み
-        string filePath = Path.Combine(Application.streamingAssetsPath, "time.txt");
-
-        // ファイルが存在するか確認
-        if (File.Exists(filePath))
-        {
-            using (StreamReader reader = new StreamReader(filePath))
-            {
-                string content = reader.ReadToEnd(); // ファイルの内容を読み込む
-                // ここでファイルの内容を解析して必要な処理を行うことができます
-                text_mesh_pro.text = content; // contentを表示
-            }
-        }
+        text_mesh_pro.text = time; // contentを表示
     }
 
     void Update()
