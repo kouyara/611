@@ -1,8 +1,6 @@
 # 611
 programing3のVRゲーム開発
 
-このリポジトリでは、Unityを使用したVRゲーム開発プロジェクト「611」のソースコードを管理しています。
-
 ---
 
 ## 目次
@@ -18,8 +16,9 @@ programing3のVRゲーム開発
 ---
 
 ## 概要
-- このプロジェクトは、**VRゲーム開発**に特化したUnityプロジェクトです。
-- リポジトリのサイズは約 `8.96GB` あります。クローン時には十分なストレージを確保してください。
+- ゲームエンジンソフト「Unity」を使って作成したVRアクションゲーム。舞台は河野研。
+ゲームの主人公は猫で、敵に捕まる前にカップラーメンを3つ集めて、先生の元へ渡さなければならない、、、
+- リポジトリのサイズは約 `8.96GB` あるので、クローン時には十分なストレージを確保する必要がある。
 
 ---
 
@@ -29,7 +28,7 @@ programing3のVRゲーム開発
 ```bash
 git clone https://github.com/kouyara/611.git
 ```
-Note: 容量は約 8.96GB あります。
+Note: 容量は約 8.96GB 。
 
 ## Unity Hub とエディタのインストール
 1. Unity Hub をインストールする
@@ -40,7 +39,6 @@ Note: 容量は約 8.96GB あります。
 * Android SDK & NDK Tools
 * Mac Build Support (IL2CPP)
 * Mac Dedicated Server Build Support
-* WebGL Build Support
 
 ## Unity プロジェクトの読み込み
 1. Unity Hub を起動し、「Projects」または「プロジェクト」タブから「Add」ボタンを押す
@@ -59,7 +57,6 @@ Note: 容量は約 8.96GB あります。
 ## その他
 * プロジェクト内にリソースやアセットが多いため、ビルドには時間がかかる場合があります。
 * 実機 (Oculus Quest) の接続がうまくいかない場合は、公式ドキュメントも参考にしてください。
-* 何か不明点や不具合があれば、Issue や Pull Request でお知らせください。
 
 ## ライセンス
 本プロジェクトのライセンスは GNU General Public License (GPL 2.0) を想定しています。
