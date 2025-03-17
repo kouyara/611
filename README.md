@@ -30,7 +30,7 @@ git clone https://github.com/kouyara/611.git
 ```
 Note: 容量は約 8.96GB 。
 
-## Unity Hub とエディタのインストール
+### Unity Hub とエディタのインストール
 1. Unity Hub をインストールする
 2. Unity バージョン 2021.3.25f1 を Unity Hub から導入する
 3. 以下のモジュールを追加インストールする（容量は約 18.74GB）
@@ -40,7 +40,7 @@ Note: 容量は約 8.96GB 。
 * Mac Build Support (IL2CPP)
 * Mac Dedicated Server Build Support
 
-## Unity プロジェクトの読み込み
+### Unity プロジェクトの読み込み
 1. Unity Hub を起動し、「Projects」または「プロジェクト」タブから「Add」ボタンを押す
 2. ローカルにクローン済みの「611」フォルダを選択してプロジェクトを登録
 3. Unity Hub 上のプロジェクト一覧に「611」が追加されるので、クリックして開く
